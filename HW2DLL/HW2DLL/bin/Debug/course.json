@@ -1,0 +1,8 @@
+{
+         "id":1,
+         "designator":"BCS",
+         "number":"101",
+         "title":"Programming Concepts and Problem Solving",
+         "description":"This course will provide an introduction to programming logic and problem solving techniques using different programming languages. The topics covered in this course will provide the skills needed to learn languages such as Visual Basic, C+ + and JAVA. Topics include such items as constants and variables, data types, scope of variables, basic logic constructs, subroutines and functions.  Students who have completed BCS 120 or equivalent cannot take BCS 101. ",
+         "credits":"3",
+ }

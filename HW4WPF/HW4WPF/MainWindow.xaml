@@ -1,0 +1,45 @@
+﻿<Window x:Class="HW4WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Course Schedule - Tim Casali" Height="850" Width="1000">
+    <Grid x:Name="FindCourseIdTextbox1">
+        <Label Content="Course Id" HorizontalAlignment="Left" Margin="343,104,0,0" VerticalAlignment="Top"/>
+        <Label Content="Designator" HorizontalAlignment="Left" Margin="343,144,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number" HorizontalAlignment="Left" Margin="343,184,0,0" VerticalAlignment="Top"/>
+        <Label Content="Title" HorizontalAlignment="Left" Margin="343,224,0,0" VerticalAlignment="Top"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="339,305,0,0" VerticalAlignment="Top"/>
+        <Label Content="Credits" HorizontalAlignment="Left" Margin="343,268,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="IdTextBox" Height="23" Margin="425,108,18,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top"/>
+        <TextBox x:Name="DesignatorTextBox" Height="23" Margin="425,148,18,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top"/>
+        <TextBox x:Name="NumberTextBox" Height="23" Margin="425,188,18,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top"/>
+        <TextBox x:Name="TitleTextBox" Height="23" Margin="425,228,18,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top"/>
+        <TextBox x:Name="DescriptionTextBox" Height="64" Margin="425,308,18,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top"/>
+        <TextBox x:Name="CreditsTextBox" Height="23" Margin="425,271,18,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top"/>
+        <Button x:Name="OpenCourseCollButton" Content="Open Course Collection" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="178" Height="39" Click="OpenCourseCollButton_Click"/>
+        <Label Content="Course Filename" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CourseFilenameTextbox" Height="23" Margin="131,6,18,0" TextWrapping="Wrap" Text=""  IsReadOnly="True" VerticalAlignment="Top"/>
+        <Label Content="Course Id" HorizontalAlignment="Left" Margin="21,135,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="FindCourseIdTextbox" HorizontalAlignment="Left" Height="23" Margin="86,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="128"/>
+        <Button x:Name="FindByCourseButton" Content="Find by Course Id" HorizontalAlignment="Left" Margin="31,174,0,0" VerticalAlignment="Top" Width="183" Height="29" Click="FindByCourseButton_Click"/>
+        <Label Content="Designator" HorizontalAlignment="Left" Margin="21,221,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number" HorizontalAlignment="Left" Margin="21,252,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="FindCourseDesignatorTextbox" HorizontalAlignment="Left" Height="23" Margin="94,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="FindCourseNumberTextbox" HorizontalAlignment="Left" Height="23" Margin="94,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Professors Filename" HorizontalAlignment="Left" Margin="51,414,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ProfessorFilenameTextbox" Height="23" Margin="172,417,18,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Button x:Name="OpenProfessorCollButton" Content="Open Professor Collection" HorizontalAlignment="Left" Margin="21,454,0,0" VerticalAlignment="Top" Width="178" Height="39" Click="OpenProfessorCollButton_Click"/>
+        <ListView x:Name="ProfessorListView" Margin="21,511,18,29">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}" Width="30"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Phone" DisplayMemberBinding="{Binding Phone}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="FindByDesignatorButton" Content="Find by Designator and Number" HorizontalAlignment="Left" Margin="31,289,0,0" VerticalAlignment="Top" Width="183" Height="29" Click="FindByDesignatorButton_Click"/>
+        <GroupBox Header="Course Data" HorizontalAlignment="Left" Margin="328,76,0,0" VerticalAlignment="Top" Height="310" Width="654"/>
+        <GroupBox Header="Find Course" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Height="247" Width="234"/>
+        <GroupBox Header="Professor Data" HorizontalAlignment="Left" Margin="10,391,0,0" VerticalAlignment="Top" Height="418" Width="972"/>
+    </Grid>
+</Window>
